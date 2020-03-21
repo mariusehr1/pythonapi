@@ -1,0 +1,10 @@
+[Unit]
+Description=Runs a python API container
+After=docker.service
+
+[Service]
+ExecStart=/usr/bin/docker run --name iktos -p 80:5000 iktos:latest
+ExecStop=/usr/bin/docker stop iktos
+
+[Install]
+WantedBy=multi-user.target
