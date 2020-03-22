@@ -27,7 +27,7 @@ docker push $reg/iktos
 
 echo "Generating a fresh pair of ssh keys ..."
 
-ssh-keygen -t rsa -f ../ssh-keys/id_rsa_aws -q -N ""
+mkdir ../ssh-keys && ssh-keygen -t rsa -f ../ssh-keys/id_rsa_aws -q -N ""
 
 echo "Creating the docker credential file for our future servers ..." 
 
