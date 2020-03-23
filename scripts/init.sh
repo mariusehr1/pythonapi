@@ -7,7 +7,7 @@ read reg
 
 echo "Building the docker image ..."
 
-docker build -t $reg/ ../api
+docker build -t $reg:latest ../api
 
 echo "Logging into the registry ..."
 
